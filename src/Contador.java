@@ -58,12 +58,13 @@ public class Contador {
      */
     static void contar(int parametroUm, int parametroDois ) throws ParametrosInvalidosException {
         //validar se parametroUm é MAIOR que parametroDois e lançar a exceção
-        if (parametroUm > parametroDois) {
+        if (parametroUm >= parametroDois) {
             throw new ParametrosInvalidosException();
         } else {
-            System.out.println("Vamos contar do número um ao número dois (incluindo este)");
+            System.out.println("O número de contagens que faremos é igual à diferença entre o primeiro e o segundo parâmetro. ");
 
-            for (int i = parametroUm; i <= parametroDois; i++) {
+            int diferenca = parametroDois - parametroUm;
+            for (int i = 1; i <= diferenca; i++) {
                 System.out.println("O número desta iteração é o: " + i);
             }
         }
